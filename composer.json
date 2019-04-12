@@ -1,0 +1,21 @@
+{
+    "name": "aigletter/model-history",
+    "description": "Package for saving model history",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Yurii Orlyk",
+            "email": "aigletter@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aigletter\\ModelHistory\\": "src"
+        }
+    }
+}
