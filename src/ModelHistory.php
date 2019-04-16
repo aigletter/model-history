@@ -53,7 +53,11 @@ trait ModelHistory
      * Todo
      * @return array
      */
-    public function changeableAttributes() {
+    public function getHistoryAttributes() {
+        return [];
+    }
+
+    public function getHistoryTypes() {
         return [];
     }
 
@@ -70,7 +74,7 @@ trait ModelHistory
             if (\Auth::id()) {
                 $changes = [];
                 foreach ($model->getDirty() as $key=>$value) {
-                    if (!in_array($key, $model->changeableAttributes())) {
+                    if (!in_array($key, $model->getHistoryAttributes())) {
                         continue;
                     }
 
